@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{EB0742F3-C17F-4A1E-A4AE-1B0FA788CE86}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HL7_LIB</RootNamespace>
+    <AssemblyName>HL7_LIB</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="HL7\Controller\BuildHeader.cs" />
+    <Compile Include="HL7\Controller\BuildResults.cs" />
+    <Compile Include="HL7\Model\HL7Encoding.cs" />
+    <Compile Include="HL7\Model\HL7Results.cs" />
+    <Compile Include="HL7\Model\HL7_ORU.cs" />
+    <Compile Include="HL7\Workers\BuildCTI.cs" />
+    <Compile Include="HL7\Workers\BuildBLG.cs" />
+    <Compile Include="HL7\Workers\BuildDG1.cs" />
+    <Compile Include="HL7\Workers\BuildOBX.cs" />
+    <Compile Include="HL7\Workers\BuildOBR.cs" />
+    <Compile Include="HL7\Workers\BuildIN3.cs" />
+    <Compile Include="HL7\Workers\BuildIN2.cs" />
+    <Compile Include="HL7\Workers\BuildORC.cs" />
+    <Compile Include="HL7\Workers\BuildMSH.cs" />
+    <Compile Include="HL7\Workers\BuildAL1.cs" />
+    <Compile Include="HL7\Workers\BuildGT1.cs" />
+    <Compile Include="HL7\Workers\BuildIN1.cs" />
+    <Compile Include="HL7\Workers\BuildPV2.cs" />
+    <Compile Include="HL7\Workers\BuildPV1.cs" />
+    <Compile Include="HL7\Workers\BuildPID.cs" />
+    <Compile Include="HL7\Workers\BuildNTE.cs" />
+    <Compile Include="HL7\Controller\BuildOrders.cs" />
+    <Compile Include="HL7\Controller\BuildPatient.cs" />
+    <Compile Include="HL7\Controller\HL7Parser.cs" />
+    <Compile Include="HL7\Controller\ProcessHL7Message.cs" />
+    <Compile Include="HL7\Model\RequiredField.cs" />
+    <Compile Include="HL7\Extension\CSVData.cs" />
+    <Compile Include="HL7\Extension\FileName.cs" />
+    <Compile Include="HL7\Extension\RenameFile.cs" />
+    <Compile Include="HL7\Model\ErrorMsg.cs" />
+    <Compile Include="HL7\Model\HL7Header.cs" />
+    <Compile Include="HL7\Model\HL7Observation.cs" />
+    <Compile Include="HL7\Model\HL7Order.cs" />
+    <Compile Include="HL7\Model\HL7Details.cs" />
+    <Compile Include="HL7\Model\HL7Patient.cs" />
+    <Compile Include="HL7\Model\HL7_ORM.cs" />
+    <Compile Include="HL7\Model\SegmentError.cs" />
+    <Compile Include="HL7\Model\Segments\AL1.cs" />
+    <Compile Include="HL7\Model\Segments\BLG.cs" />
+    <Compile Include="HL7\Model\Segments\CTI.cs" />
+    <Compile Include="HL7\Model\Segments\DG1.cs" />
+    <Compile Include="HL7\Model\Segments\GT1.cs" />
+    <Compile Include="HL7\Model\Segments\IN1.cs" />
+    <Compile Include="HL7\Model\Segments\IN2.cs" />
+    <Compile Include="HL7\Model\Segments\IN3.cs" />
+    <Compile Include="HL7\Model\Segments\MSH.cs" />
+    <Compile Include="HL7\Model\Segments\NTE.cs" />
+    <Compile Include="HL7\Model\Segments\OBR.cs" />
+    <Compile Include="HL7\Model\Segments\OBX.cs" />
+    <Compile Include="HL7\Model\Segments\ORC.cs" />
+    <Compile Include="HL7\Model\Segments\PD1.cs" />
+    <Compile Include="HL7\Model\Segments\PID.cs" />
+    <Compile Include="HL7\Model\Segments\PV1.cs" />
+    <Compile Include="HL7\Model\Segments\PV2.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="STARLIMS\db.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Verification\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
