@@ -96,8 +96,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="STARLIMS\db.cs" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="Verification\" />
+    <None Include="Verification\PrecisionVerification.cfg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
