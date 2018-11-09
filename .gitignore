@@ -34,5 +34,5 @@
 # debug folder
 Debug/
 Release/
-packages/
+# packages/
 .vs/
